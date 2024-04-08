@@ -35,7 +35,7 @@ export const Footer = () => {
         <div className="container p-4 xl:p-0">
           <Link href="/">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="logo"
               width={251}
               height={89}

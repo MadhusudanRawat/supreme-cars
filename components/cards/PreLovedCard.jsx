@@ -23,7 +23,7 @@ export const PreLovedCard = ({ mb, width, item }) => {
         <span className="badge">${item?.price}</span>
       </div>
       <Image
-        src="/images/plc-1.png"
+        src="/images/plc-1.webp"
         alt="plc-1"
         width={354}
         height={156}

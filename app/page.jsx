@@ -34,7 +34,7 @@ export default function Home() {
                 <span className="text-primary uppercase">here</span>
               </p>
               <Image
-                src="/images/title-border.png"
+                src="/images/title-border.webp"
                 alt="title border"
                 width={460}
                 height={2}
@@ -48,7 +48,7 @@ export default function Home() {
               pre-loved
             </h2>
             <Image
-              src="/images/title-border.png"
+              src="/images/title-border.webp"
               alt="title border"
               width={460}
               height={2}
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container">
           <h2 className="heading text-center uppercase mb-[10px]">Brand New</h2>
           <Image
-            src="/images/title-border.png"
+            src="/images/title-border.webp"
             alt="title border"
             width={460}
             height={2}
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="container">
           <h2 className="heading text-center mb-[10px] text-white">About Us</h2>
           <Image
-            src="/images/title-border-white.png"
+            src="/images/title-border-white.webp"
             alt="title border white"
             width={460}
             height={2}

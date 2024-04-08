@@ -5,7 +5,7 @@ export const StaffCard = () => {
   return (
     <div className="w-full p-2 xl:ps-12">
       <Image
-        src="/images/staff-1.png"
+        src="/images/staff-1.webp"
         alt="staff-1"
         width={220}
         height={220}

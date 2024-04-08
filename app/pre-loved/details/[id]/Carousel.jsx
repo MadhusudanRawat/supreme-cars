@@ -80,25 +80,25 @@ export const Carousel = () => {
       <div className="w-full overflow-hidden">
         <Slider {...settings}>
           <Image
-            src="/images/v-1-lg.png"
+            src="/images/v-1-lg.webp"
             alt="view 1"
             width={1920}
             height={1065}
           />
           <Image
-            src="/images/v-1-lg.png"
+            src="/images/v-1-lg.webp"
             alt="view 2"
             width={1920}
             height={1065}
           />
           <Image
-            src="/images/v-1-lg.png"
+            src="/images/v-1-lg.webp"
             alt="view 3"
             width={1920}
             height={1065}
           />
           <Image
-            src="/images/v-1-lg.png"
+            src="/images/v-1-lg.webp"
             alt="view 4"
             width={1920}
             height={1065}
@@ -110,7 +110,7 @@ export const Carousel = () => {
           <div className="p-2">
             <Image
               id="item"
-              src="/images/v-1.png"
+              src="/images/v-1.webp"
               alt="view 1"
               width={331}
               height={226}
@@ -119,7 +119,7 @@ export const Carousel = () => {
           <div className="p-2">
             <Image
               id="item"
-              src="/images/v-2.png"
+              src="/images/v-2.webp"
               alt="view 2"
               width={331}
               height={226}
@@ -128,7 +128,7 @@ export const Carousel = () => {
           <div className="p-2">
             <Image
               id="item"
-              src="/images/v-3.png"
+              src="/images/v-3.webp"
               alt="view 3"
               width={331}
               height={226}
@@ -137,7 +137,7 @@ export const Carousel = () => {
           <div className="p-2">
             <Image
               id="item"
-              src="/images/v-4.png"
+              src="/images/v-4.webp"
               alt="view 4"
               width={331}
               height={226}

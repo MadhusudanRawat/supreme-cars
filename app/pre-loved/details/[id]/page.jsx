@@ -11,25 +11,25 @@ const PreLovedDetails = () => {
   const highlightItems = [
     {
       id: 1,
-      image: "/images/h-1.png",
+      image: "/images/h-1.webp",
       alt: "h-1",
       title: "180-Point Inspection",
     },
     {
       id: 2,
-      image: "/images/h-2.png",
+      image: "/images/h-2.webp",
       alt: "h-2",
       title: "48-Hour Money Back Guarantee",
     },
     {
       id: 3,
-      image: "/images/h-3.png",
+      image: "/images/h-3.webp",
       alt: "h-3",
       title: "12-Month Warranty for engine & Gearbox",
     },
     {
       id: 4,
-      image: "/images/h-4.png",
+      image: "/images/h-4.webp",
       alt: "h-4",
       title: "No Mileage Tampering",
     },
@@ -54,7 +54,7 @@ const PreLovedDetails = () => {
         <div className="container">
           <div className="bg-details-highlight flex items-center justify-center gap-16">
             <Image
-              src="/images/logo-color.png"
+              src="/images/logo-color.webp"
               alt="logo-color"
               width={190}
               height={73}

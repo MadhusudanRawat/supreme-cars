@@ -18,23 +18,23 @@ export const CTA = () => {
       <p className="heading text-primary mb-6">$460,080</p>
       <div className="bg-[#F3F3F3] p-4 rounded-[10px] flex flex-wrap gap-4 mb-10">
         <span className="inline-flex items-center gap-1">
-          <Image src="/images/d-1.png" alt="d-1" width={24} height={24} />
+          <Image src="/images/d-1.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">16 Nov 2016</p>
         </span>
         <span className="inline-flex items-center gap-1">
-          <Image src="/images/d-2.png" alt="d-1" width={24} height={24} />
+          <Image src="/images/d-2.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">66,000 km</p>
         </span>
         <span className="inline-flex items-center gap-1">
-          <Image src="/images/d-3.png" alt="d-1" width={24} height={24} />
+          <Image src="/images/d-3.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">1</p>
         </span>
         <span className="inline-flex items-center gap-1">
-          <Image src="/images/d-4.png" alt="d-1" width={24} height={24} />
+          <Image src="/images/d-4.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">$69,160/yr</p>
         </span>
         <span className="inline-flex items-center gap-1">
-          <Image src="/images/d-5.png" alt="d-1" width={24} height={24} />
+          <Image src="/images/d-5.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">$375,483</p>
         </span>
       </div>
@@ -53,7 +53,7 @@ export const CTA = () => {
         </button>
         <button type="button" className="inline-block w-[33px] h-[33px]">
           <Image
-            src="/images/social-whatsapp.png"
+            src="/images/social-whatsapp.webp"
             alt="whatsapp"
             width={33}
             height={33}
