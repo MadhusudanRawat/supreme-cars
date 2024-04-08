@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "DIN";
+  src: url("../public/fonts/DIN-Medium.woff2") format("woff2"),
+    url("../public/fonts/DIN-Medium.woff") format("woff"),
+    url("../public/fonts/DIN-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("../public/fonts/DINBold.woff2") format("woff2"),
+    url("../public/fonts/DINBold.woff") format("woff"),
+    url("../public/fonts/DINBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Never Brat";
+  src: url("../public/fonts/NeverBrat.woff2") format("woff2"),
+    url("../public/fonts/NeverBrat.woff") format("woff"),
+    url("../public/fonts/NeverBrat.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("../public/fonts/DIN.woff2") format("woff2"),
+    url("../public/fonts/DIN.woff") format("woff"),
+    url("../public/fonts/DIN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("../public/fonts/DIN-Black.woff2") format("woff2"),
+    url("../public/fonts/DIN-Black.woff") format("woff"),
+    url("../public/fonts/DIN-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "DIN";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+.font-never-brat {
+  font-family: "Never Brat";
+  letter-spacing: -4%;
+}
+
+.heading {
+  @apply text-3xl lg:text-[40px] font-bold lg:leading-[49px];
+}
+
+.button {
+  @apply lg:w-[200px] lg:h-[55px] px-8 py-2 lg:py-4 text-lg leading-[22px] font-medium lg:font-bold text-white bg-primary rounded-[5px] inline-flex items-center justify-center gap-[10px] transition-colors lg:hover:bg-primary/80;
+}
+
+.button-outline {
+  @apply font-medium border-2 border-primary text-primary bg-transparent lg:hover:bg-primary lg:hover:text-white;
+}
+
+.button-small {
+  @apply w-[160px] h-[35px];
+}
+
+.button-full {
+  @apply w-full;
+}
+
+.input {
+  @apply px-[15px] py-[10px] rounded-[5px] text-base leading-[19px] ring-1 ring-neutral-300;
+}
+
+.input-small {
+  @apply py-1 h-[35px] leading-none text-base;
+}
+
+.container {
+  @apply max-w-[1120px] w-full mx-auto;
+}
+
+.badge {
+  @apply w-[108px] h-[30px] bg-primary inline-flex items-center justify-center text-white text-xl leading-[24px] font-bold;
+}
+
+.bg {
+  background-image: url("../public/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  width: 100%;
+  padding: 144px 0;
+}
+
+.bg-about-us {
+  background-image: url("../public/images/bg-about-us.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  width: 100%;
+  padding: 10px;
+}
+
+.bg-beverages {
+  background-image: url("../public/images/bg-beverages.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 64px 0;
+}
+
+.bg-footer {
+  background-image: url("../public/images/bg-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 48px 0;
+}
+
+.bg-pre-loved {
+  background-image: url("../public/images/bg-pre-loved.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  width: 100%;
+  padding: 144px 0;
+}
+
+.bg-about-us-page {
+  background-image: url("../public/images/bg-about-us-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  width: 100%;
+  padding: 62px 0;
+}
+
+.bg-details-highlight {
+  background-image: url("../public/images/bg-details-highlight.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 40px 0;
+}
+
+.bg-test-drive {
+  background-image: url("../public/images/bg-test-drive.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 85px 0px;
+}
+
+.slick-dots li {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #b1b1b1;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active {
+  width: 24px !important;
+  height: 12px !important;
+  background-color: #ee2737;
+  border-radius: 12px;
+}
+
+.slick-dots li button::before {
+  background: transparent !important;
+  display: none !important;
+}
