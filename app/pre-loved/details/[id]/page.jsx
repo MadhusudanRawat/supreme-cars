@@ -38,9 +38,9 @@ const PreLovedDetails = () => {
   return (
     <>
       <Carousel />
-      <section className="py-12">
-        <div className="container">
-          <div className="flex gap-10">
+      <section className="py-5 lg:py-12">
+        <div className="container p-4 xl:p-0">
+          <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
             <div className="flex-1">
               <Tabs />
               <Overview />
@@ -50,22 +50,24 @@ const PreLovedDetails = () => {
           </div>
         </div>
       </section>
-      <section className="pt-[116px] pb-[96px]">
-        <div className="container">
-          <div className="bg-details-highlight flex items-center justify-center gap-16">
+      <section className="py-5 lg:pt-[116px] lg:pb-[96px]">
+        <div className="container p-4 xl:p-0">
+          <div className="bg-details-highlight flex flex-col xl:flex-row items-center justify-center gap-10 lg:gap-16">
             <Image
               src="/images/logo-color.webp"
               alt="logo-color"
               width={190}
               height={73}
-              className="me-4"
+              className="lg:me-4"
             />
-            <div className="flex items-start gap-10">
+            <div className="flex flex-wrap items-start gap-0 lg:gap-10">
               {highlightItems.map((item) => (
                 <div
                   key={item.id}
                   className={`${
-                    item.id === 3 ? "max-w-[170px]" : "max-w-[160px]"
+                    item.id === 3
+                      ? "w-1/2 p-4 lg:p-0 lg:w-[170px]"
+                      : "w-1/2 p-4 lg:p-0 lg:w-[160px]"
                   } flex flex-col items-center justify-center gap-[22px]`}
                 >
                   <Image
@@ -84,7 +86,7 @@ const PreLovedDetails = () => {
         </div>
       </section>
       <section className="bg-test-drive">
-        <div className="container">
+        <div className="container p-4 xl:p-0">
           <h1 className="font-never-brat text-xl lg:text-[30px] lg:leading-[39px] text-white uppercase">
             FEEL YOUR RIDE
           </h1>
@@ -93,7 +95,7 @@ const PreLovedDetails = () => {
           </p>
           <div className="flex">
             <TestDriveForm />
-            <div className="w-1/2"></div>
+            <div className="w-1/2 hidden lg:block"></div>
           </div>
         </div>
       </section>

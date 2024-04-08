@@ -105,9 +105,9 @@ export const Carousel = () => {
           />
         </Slider>
       </div>
-      <div className="p-6 bg-[#E1E1E1]">
+      <div className="lg:p-6 bg-[#E1E1E1]">
         <Slider {...settings2}>
-          <div className="p-2">
+          <div className="p-1 lg:p-2">
             <Image
               id="item"
               src="/images/v-1.webp"
@@ -116,7 +116,7 @@ export const Carousel = () => {
               height={226}
             />
           </div>
-          <div className="p-2">
+          <div className="p-1 lg:p-2">
             <Image
               id="item"
               src="/images/v-2.webp"
@@ -125,7 +125,7 @@ export const Carousel = () => {
               height={226}
             />
           </div>
-          <div className="p-2">
+          <div className="p-1 lg:p-2">
             <Image
               id="item"
               src="/images/v-3.webp"
@@ -134,7 +134,7 @@ export const Carousel = () => {
               height={226}
             />
           </div>
-          <div className="p-2">
+          <div className="p-1 lg:p-2">
             <Image
               id="item"
               src="/images/v-4.webp"

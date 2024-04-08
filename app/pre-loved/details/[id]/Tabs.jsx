@@ -29,13 +29,13 @@ export const Tabs = () => {
   };
 
   return (
-    <div className="border-b px-[77px] border-b-neutral-200 flex items-center justify-between mb-10">
+    <div className="w-full overflow-x-auto lg:overflow-hidden border-b px-0 lg:px-[77px] border-b-neutral-200 flex items-center justify-between gap-2 lg:gap-0 mb-4 lg:mb-10">
       {tabItems.map((item) => (
         <button
           key={item.id}
           type="button"
           onClick={() => handleOnToggleActive(item.id)}
-          className={`pe-5 pb-[10px] border-b-[5px] ${
+          className={`pe-5 pb-1 lg:pb-[10px] border-b-[5px] ${
             item.id === active
               ? "border-b-primary text-primary"
               : "border-b-transparent text-neutral-400"

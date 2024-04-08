@@ -6,7 +6,7 @@ export const TestDriveForm = () => {
   };
 
   return (
-    <form onSubmit={handleOnFormSubmit} className="w-1/2">
+    <form onSubmit={handleOnFormSubmit} className="w-full lg:w-1/2">
       <div className="flex items-center gap-[30px] mb-[26px]">
         <div className="flex-1">
           <label

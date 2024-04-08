@@ -6,7 +6,7 @@ export const Finance = () => {
       <h1 className="text-[30px] leading-[37px] tracking-tighter font-bold mb-6">
         Financing Your Car With Us
       </h1>
-      <div className="p-9 rounded-[20px] bg-[#F6F6F6] w-full">
+      <div className="p-4 lg:p-9 rounded-[20px] bg-[#F6F6F6] w-full">
         <label
           htmlFor="financeSellingPrice"
           className="ms-3 text-[15px] leading-[18px] tracking-tighter inline-block mb-2"

@@ -39,13 +39,13 @@ export const Overview = () => {
     },
   ];
   return (
-    <div className="flex gap-6 flex-wrap mb-[132px]">
+    <div className="flex gap-4 lg:gap-6 flex-wrap mb-12 lg:mb-[132px]">
       {overviewData.map((item) => (
         <div
           key={item.id}
           className={`${
             item.id === 3 ? "bg-primary text-white" : "bg-white"
-          } max-w-[224px] w-full shadow-dark rounded-[10px] px-[32px] py-5 flex items-center justify-center gap-[10px]`}
+          } max-w-full sm:max-w-[48.5%] lg:max-w-[224px] w-full shadow-dark rounded-[10px] px-[32px] py-5 flex items-center justify-center gap-[10px]`}
         >
           <Image src={item.image} alt={item.alt} width={35} height={35} />
           <span className="flex-1">

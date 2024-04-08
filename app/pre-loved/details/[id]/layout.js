@@ -13,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <main>
       {children}
-      <section className="my-[96px]">
+      <section className="my-10 lg:my-[96px]">
         <div className="container">
-          <h2 className="heading text-center font-bold mb-12">
+          <h2 className="heading text-center font-bold px-4 mb-5 lg:mb-12">
             Similar cars that you may like!
           </h2>
           <PreLovedCarousel />
