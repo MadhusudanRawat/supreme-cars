@@ -67,6 +67,13 @@ body {
   overflow-x: hidden;
 }
 
+input,
+button,
+select,
+textarea {
+  @apply outline-none;
+}
+
 .font-never-brat {
   font-family: "Never Brat";
   letter-spacing: -4%;
@@ -173,7 +180,6 @@ body {
   background-position: center;
   width: 100%;
   border-radius: 10px;
-  padding: 40px 0;
 }
 
 .bg-test-drive {
@@ -202,4 +208,14 @@ body {
 .slick-dots li button::before {
   background: transparent !important;
   display: none !important;
+}
+
+.range-slider,
+.range-slider .range-slider__range {
+  background-color: #ee2737 !important;
+}
+
+.range-slider .range-slider__thumb {
+  background-color: #000000 !important;
+  border-radius: 5px !important;
 }

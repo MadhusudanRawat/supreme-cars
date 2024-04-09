@@ -6,8 +6,18 @@ import { Overview } from "./Overview";
 import { Tabs } from "./Tabs";
 import { TestDriveForm } from "@/components/forms/TestDriveForm";
 import { Carousel } from "./Carousel";
+import { CarsListData } from "@/constants";
 
-const PreLovedDetails = () => {
+export const getDetails = (id) => {
+  const response = CarsListData.filter((car) => car.id === parseInt(id));
+
+  return response ? response[0] : null;
+};
+
+const PreLovedDetails = ({ params }) => {
+  const details = getDetails(params?.id);
+  console.log(details);
+
   const highlightItems = [
     {
       id: 1,
@@ -43,21 +53,21 @@ const PreLovedDetails = () => {
           <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
             <div className="flex-1">
               <Tabs />
-              <Overview />
-              <Finance />
+              <Overview details={details} />
+              <Finance details={details} />
             </div>
-            <CTA />
+            <CTA details={details} />
           </div>
         </div>
       </section>
       <section className="py-5 lg:pt-[116px] lg:pb-[96px]">
         <div className="container p-4 xl:p-0">
-          <div className="bg-details-highlight flex flex-col xl:flex-row items-center justify-center gap-10 lg:gap-16">
+          <div className="bg-details-highlight flex flex-col xl:flex-row items-center justify-start py-10 md:px-[60px] gap-10 lg:gap-12">
             <Image
               src="/images/logo-color.webp"
               alt="logo-color"
-              width={190}
-              height={73}
+              width={180}
+              height={70}
               className="lg:me-4"
             />
             <div className="flex flex-wrap items-start gap-0 lg:gap-10">
@@ -67,14 +77,14 @@ const PreLovedDetails = () => {
                   className={`${
                     item.id === 3
                       ? "w-1/2 p-4 lg:p-0 lg:w-[170px]"
-                      : "w-1/2 p-4 lg:p-0 lg:w-[160px]"
+                      : "w-1/2 p-4 lg:p-0 lg:w-[140px]"
                   } flex flex-col items-center justify-center gap-[22px]`}
                 >
                   <Image
                     src={item.image}
                     alt={item.alt}
-                    width={96}
-                    height={96}
+                    width={72}
+                    height={72}
                   />
                   <p className="text-center text-white font-bold text-[19px] leading-[23px] tracking-tighter">
                     {item.title}

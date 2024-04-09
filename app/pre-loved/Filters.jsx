@@ -56,13 +56,17 @@ export const Filters = ({ filterString }) => {
                 {filters?.brand} <X className="w-4 h-4" />
               </button>
             )}
-            {filters?.price > 0 && (
+            {filters?.priceFrom && (
               <button
                 type="button"
-                onClick={() => handleRemoveFilter("price")}
+                onClick={() => {
+                  handleRemoveFilter("priceFrom");
+                  handleRemoveFilter("priceTo");
+                }}
                 className="px-4 py-2 bg-primary text-white inline-flex items-center gap-[10px] font-medium rounded-[5px]"
               >
-                ${filters?.price} <X className="w-4 h-4" />
+                ${filters?.priceFrom}-${filters?.priceTo}{" "}
+                <X className="w-4 h-4" />
               </button>
             )}
             {filters?.year && (

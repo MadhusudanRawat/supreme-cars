@@ -46,7 +46,7 @@ const PreLoved = () => {
                   href="/pre-loved/details/id"
                   className="button button-outline"
                 >
-                  Load More
+                  LOAD MORE
                 </Link>
               </div>
             </div>

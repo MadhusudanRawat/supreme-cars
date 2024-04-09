@@ -7,8 +7,8 @@ export const TestDriveForm = () => {
 
   return (
     <form onSubmit={handleOnFormSubmit} className="w-full lg:w-1/2">
-      <div className="flex items-center gap-[30px] mb-[26px]">
-        <div className="flex-1">
+      <div className="flex flex-col md:flex-row items-center gap-[30px] mb-[26px]">
+        <div className="w-full md:flex-1">
           <label
             htmlFor="testDriveName"
             className="text-[15px] leading-[18px] text-white inline-block mb-2"
@@ -20,10 +20,10 @@ export const TestDriveForm = () => {
             name="name"
             id="testDriveName"
             placeholder="Name"
-            className="border border-white bg-transparent p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
+            className="border border-white bg-black/30 p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
           />
         </div>
-        <div className="flex-1">
+        <div className="w-full md:flex-1">
           <label
             htmlFor="testDriveEmail"
             className="text-[15px] leading-[18px] text-white inline-block mb-2"
@@ -35,12 +35,12 @@ export const TestDriveForm = () => {
             name="email"
             id="testDriveEmail"
             placeholder="Email"
-            className="border border-white bg-transparent p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
+            className="border border-white bg-black/30 p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
           />
         </div>
       </div>
-      <div className="flex items-center gap-[30px] mb-[26px]">
-        <div className="flex-1">
+      <div className="flex flex-col md:flex-row items-center gap-[30px] mb-[26px]">
+        <div className="w-full md:flex-1">
           <label
             htmlFor="testDrivePhone"
             className="text-[15px] leading-[18px] text-white inline-block mb-2"
@@ -52,10 +52,10 @@ export const TestDriveForm = () => {
             name="phone"
             id="testDrivePhone"
             placeholder="Phone"
-            className="border border-white bg-transparent p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
+            className="border border-white bg-black/30 p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
           />
         </div>
-        <div className="flex-1">
+        <div className="w-full md:flex-1">
           <label
             htmlFor="testDriveModel"
             className="text-[15px] leading-[18px] text-white inline-block mb-2"
@@ -65,7 +65,7 @@ export const TestDriveForm = () => {
           <select
             name="email"
             id="testDriveModel"
-            className="border border-white bg-transparent p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
+            className="border border-white bg-black/30 p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
           >
             <option value="">Model Interest</option>
           </select>
@@ -84,7 +84,7 @@ export const TestDriveForm = () => {
           rows={6}
           id="testDriveMessage"
           placeholder="Message"
-          className="border border-white bg-transparent p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
+          className="border border-white bg-black/30 p-4 text-[15px] leading-[18px] text-white placeholder:text-white w-full rounded-[5px]"
         />
       </div>
       <button type="submit" className="button button-full">

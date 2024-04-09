@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+
+import RangeSlider from "react-range-slider-input";
+
 import { convertObjectToString } from "@/utils/convertObjectToString";
 import { convertStringToObject } from "@/utils/convertStringToObject";
+import { CarsListData } from "@/constants";
 
 export const Sort = ({ filterString }) => {
   const router = useRouter();
@@ -11,12 +15,22 @@ export const Sort = ({ filterString }) => {
   const [isRedirect, setIsRedirect] = useState(false);
 
   const handleOnInputChange = (e) => {
-    const { name, value } = e.target;
-
     setIsRedirect(true);
-    if (value?.trim() === "" || value === 0) {
-      delete filters[name];
-    } else setFilters({ ...filters, [name]: value });
+
+    if (Array.isArray(e)) {
+      if (e[0] === 0 && e[1] === 0) {
+        delete filters["priceFrom"];
+        delete filters["priceTo"];
+      } else {
+        setFilters({ ...filters, priceFrom: e[0], priceTo: e[1] });
+      }
+    } else {
+      const { name, value } = e.target;
+
+      if (value?.trim() === "") {
+        delete filters[name];
+      } else setFilters({ ...filters, [name]: value });
+    }
   };
 
   useEffect(() => {
@@ -57,27 +71,36 @@ export const Sort = ({ filterString }) => {
         className="border-2 border-neutral-400 rounded-[10px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full mb-[22px]"
       >
         <option value="">All</option>
+        {CarsListData.filter(
+          (item, index) => item?.brand !== CarsListData[index - 1]
+        ).map((brand) => (
+          <option key={brand.id} value={brand.brand}>
+            {brand.brand}
+          </option>
+        ))}
       </select>
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-3">
         <label
           htmlFor="preLovedSortBrand"
           className="inline-block text-[15px] leading-[18px] font-medium"
         >
           Price:
         </label>
-        {filters?.price > 0 && (
+        {parseInt(filters?.priceTo) > 0 && (
           <p className="text-sm font-bold text-primary">
-            $0-${filters?.price * 1000}
+            ${parseInt(filters?.priceFrom)}-$
+            {parseInt(filters?.priceTo)}
           </p>
         )}
       </div>
-      <input
-        type="range"
-        name="price"
+      <RangeSlider
         id="preLovedSortPrice"
-        value={filters?.price || 0}
-        onChange={handleOnInputChange}
-        className="w-full accent-primary h-[5px] mb-1"
+        min={0}
+        max={1000000}
+        step={1000}
+        value={[filters?.priceFrom, filters?.priceTo] || [0, 0]}
+        onInput={handleOnInputChange}
+        className="w-full h-[5px] mb-3"
       />
       <div className="flex items-center justify-between mb-[22px]">
         <p className="text-xs leading-4">$0</p>

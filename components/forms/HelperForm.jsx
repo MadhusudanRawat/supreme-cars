@@ -8,7 +8,7 @@ export const HelperForm = () => {
   return (
     <form
       onSubmit={handleFormSubmit}
-      className="w-full flex flex-col md:flex-row items-center justify-center gap-5 mb-5"
+      className="w-full flex flex-col md:flex-row items-center justify-center gap-4 mb-5"
     >
       <select
         name="country"
@@ -38,7 +38,7 @@ export const HelperForm = () => {
       >
         <option value="">Model</option>
       </select>
-      <button type="submit" className="button button-small">
+      <button type="submit" className="button button-full button-small">
         Search
       </button>
     </form>

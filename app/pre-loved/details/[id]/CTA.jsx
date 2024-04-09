@@ -3,39 +3,41 @@ import Image from "next/image";
 
 import { SquareArrowOutUpRight } from "lucide-react";
 
-export const CTA = () => {
+export const CTA = ({ details }) => {
   return (
     <div className="lg:max-w-[360px] h-max w-full bg-white shadow-regular rounded-[10px] py-[35px] px-[25px]">
       <div className="flex items-start justify-between mb-[6px]">
         <span className="flex-1">
           <p className="text-[11px] leading-[13px]">Pre-Owned</p>
-          <p className="text-xl leading-6">Bentley Bentayga 6.0A</p>
+          <p className="text-xl leading-6">
+            {details?.brand} {details?.name}-{details?.model}
+          </p>
         </span>
         <Link href="/">
           <SquareArrowOutUpRight className="w-5 h-5 text-neutral-400" />
         </Link>
       </div>
-      <p className="heading text-primary mb-6">$460,080</p>
+      <p className="heading text-primary mb-6">${details?.price}</p>
       <div className="bg-[#F3F3F3] p-4 rounded-[10px] flex flex-wrap gap-4 mb-10">
-        <span className="inline-flex items-center gap-1">
+        <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-1.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">16 Nov 2016</p>
         </span>
-        <span className="inline-flex items-center gap-1">
+        <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-2.webp" alt="d-1" width={24} height={24} />
-          <p className="text-sm leading-4 font-bold">66,000 km</p>
+          <p className="text-sm leading-4 font-bold">{details?.distance} km</p>
         </span>
-        <span className="inline-flex items-center gap-1">
+        <span className="w-[10%] inline-flex items-center gap-1">
           <Image src="/images/d-3.webp" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">1</p>
         </span>
-        <span className="inline-flex items-center gap-1">
+        <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-4.webp" alt="d-1" width={24} height={24} />
-          <p className="text-sm leading-4 font-bold">$69,160/yr</p>
+          <p className="text-sm leading-4 font-bold">${details?.price}/yr</p>
         </span>
-        <span className="inline-flex items-center gap-1">
+        <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-5.webp" alt="d-1" width={24} height={24} />
-          <p className="text-sm leading-4 font-bold">$375,483</p>
+          <p className="text-sm leading-4 font-bold">${details?.price}</p>
         </span>
       </div>
       <div className="flex items-center gap-2">

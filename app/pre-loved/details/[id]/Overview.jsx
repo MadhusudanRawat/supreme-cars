@@ -1,43 +1,44 @@
 import Image from "next/image";
 
-export const Overview = () => {
+export const Overview = ({ details }) => {
   const overviewData = [
     {
       id: 1,
       image: "/images/d-1.webp",
       alt: "d-1",
       title: "Registration Date",
-      body: "18 Nov 2016",
+      body: `${details?.registration}`,
     },
     {
       id: 2,
       image: "/images/d-2.webp",
       alt: "d-2",
       title: "Depreciation",
-      body: "$69,160/yr",
+      body: `$${details?.price}/year`,
     },
     {
       id: 3,
       image: "/images/d-3-light.webp",
       alt: "d-3",
       title: "No. of Owners",
-      body: "1",
+      body: 1,
     },
     {
       id: 4,
       image: "/images/d-4.webp",
       alt: "d-4",
       title: "Mileage",
-      body: "66,000 km",
+      body: `${details?.distance}km`,
     },
     {
       id: 5,
       image: "/images/d-5.webp",
       alt: "d-5",
       title: "ARF",
-      body: "$375,483",
+      body: `$${details?.price}`,
     },
   ];
+
   return (
     <div className="flex gap-4 lg:gap-6 flex-wrap mb-12 lg:mb-[132px]">
       {overviewData.map((item) => (

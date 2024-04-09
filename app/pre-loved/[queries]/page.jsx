@@ -22,7 +22,10 @@ export const getData = async (string) => {
     if (data.brand && car.brand.toLowerCase() !== data.brand.toLowerCase()) {
       return false;
     }
-    if (data.price && car.price > data.price * 1000) {
+    if (data.priceFrom && car.price < parseInt(data.priceFrom)) {
+      return false;
+    }
+    if (data.priceTo && car.price > parseInt(data.priceTo)) {
       return false;
     }
     if (data.year && car.registration !== parseInt(data.year)) {
@@ -89,7 +92,7 @@ const PreLovedQueries = async ({ params }) => {
                     href="/pre-loved/details/id"
                     className="button button-outline"
                   >
-                    Load More
+                    LOAD MORE
                   </Link>
                 </div>
               )}

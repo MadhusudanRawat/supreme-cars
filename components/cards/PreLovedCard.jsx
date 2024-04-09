@@ -6,7 +6,7 @@ import { Circle } from "lucide-react";
 export const PreLovedCard = ({ mb, width, item }) => {
   return (
     <Link
-      href="/pre-loved/details/id"
+      href={`/pre-loved/details/${item?.id}`}
       className={`block ${
         width ? width : "w-[92%] md:w-[340px] lg:w-[310px] xl:w-[350px]"
       } ${

@@ -1,6 +1,34 @@
 "use client";
 
-export const Finance = () => {
+import { useEffect, useState } from "react";
+
+export const Finance = ({ details }) => {
+  const [data, setData] = useState(null);
+  const [estimateValue, setEstimateValue] = useState(0);
+
+  const handleOnInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setData({ ...data, [name]: value });
+  };
+
+  useEffect(() => {
+    // Loan amount x interest rate x loan period (years) + loan amount / loan period (month) = monthly instalment
+    const handleGetEstimateValue = () => {
+      const one =
+        details?.price *
+          parseInt(data?.interestRate) *
+          (parseInt(data?.tenure) / 12) +
+        details?.price;
+
+      const result = one / parseInt(data?.tenure);
+
+      setEstimateValue(Math.ceil(result));
+    };
+
+    if (details && data?.interestRate && data?.tenure) handleGetEstimateValue();
+  }, [details, data]);
+
   return (
     <div className="w-full">
       <h1 className="text-[30px] leading-[37px] tracking-tighter font-bold mb-6">
@@ -19,7 +47,7 @@ export const Finance = () => {
             type="number"
             name="sellingPrice"
             id="financeSellingPrice"
-            value={260000}
+            value={details?.price}
             readOnly
             className="flex-1 text-[15px] leading-[18px] bg-transparent outline-none text-black"
           />
@@ -36,6 +64,8 @@ export const Finance = () => {
             type="number"
             name="downPayment"
             id="financeDownPayment"
+            value={data?.downPayment}
+            onChange={handleOnInputChange}
             placeholder="Enter your down payment"
             className="flex-1 text-[15px] leading-[18px] bg-transparent outline-none text-black"
           />
@@ -49,6 +79,8 @@ export const Finance = () => {
         <select
           name="interestRate"
           id="financeInterestRate"
+          value={data?.interestRate}
+          onChange={handleOnInputChange}
           className="border bg-white border-[#B1B1B1] rounded-[10px] h-[53px] w-full mb-[25px] px-7 py-[16px] text-[15px] leading-[18px] outline-none text-black"
         >
           <option value="">Select Interest Rate</option>
@@ -66,6 +98,8 @@ export const Finance = () => {
         <select
           name="tenure"
           id="financeTenure"
+          value={data?.tenure}
+          onChange={handleOnInputChange}
           className="border bg-white border-[#B1B1B1] rounded-[10px] h-[53px] w-full mb-10 px-7 py-[16px] text-[15px] leading-[18px] outline-none text-black"
         >
           <option value="">Select Interest Rate</option>
@@ -79,7 +113,7 @@ export const Finance = () => {
             Estimated Monthly Instalment
           </p>
           <p className="heading text-primary text-center">
-            <span className="underline">$ 4,726</span> Per Month
+            <span className="underline">$ {estimateValue}</span> Per Month
           </p>
         </div>
       </div>
