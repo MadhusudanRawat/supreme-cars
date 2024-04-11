@@ -44,7 +44,7 @@ export const Filters = ({ filterString }) => {
       <h2 className="text-3xl lg:text-[32px] lg:leading-[39px] font-bold mb-3 lg:mb-5">
         Filter by
       </h2>
-      <div className="flex flex-col lg:flex-row items-start lg:justify-between gap-4">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center lg:justify-between gap-4">
         {filters ? (
           <div className="flex items-center gap-3">
             {filters?.brand && (
@@ -104,11 +104,11 @@ export const Filters = ({ filterString }) => {
             placeholder="Search Brands, Price, Registration Year"
             value={filters?.query || query}
             onChange={(e) => setQuery(e.target.value)}
-            className="placeholder:text-neutral-400 font-medium border-2 leading-none flex-1 border-neutral-400 border-r-0 rounded-tl-[10px] rounded-bl-[10px] px-[22px] py-[12px]"
+            className="placeholder:text-neutral-400 h-full font-medium border-2 leading-none flex-1 border-neutral-400 border-r-0 rounded-tl-[5px] rounded-bl-[5px] px-[22px] py-[12px]"
           />
           <button
             type="submit"
-            className="w-[65px] h-[50px] overflow-hidden bg-primary text-white inline-flex items-center justify-center rounded-tr-[10px] rounded-br-[10px]"
+            className="w-[65px] h-[50px] overflow-hidden bg-primary text-white inline-flex items-center justify-center rounded-tr-[5px] rounded-br-[5px]"
           >
             <Search className="w-5 h-5" />
           </button>

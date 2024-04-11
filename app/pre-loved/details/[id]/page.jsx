@@ -9,7 +9,7 @@ import { Carousel } from "./Carousel";
 import { CarsListData } from "@/constants";
 
 export const getDetails = (id) => {
-  const response = CarsListData.filter((car) => car.id === parseInt(id));
+  const response = CarsListData.filter((car) => car.id === id);
 
   return response ? response[0] : null;
 };
@@ -95,7 +95,7 @@ const PreLovedDetails = ({ params }) => {
           </div>
         </div>
       </section>
-      <section className="bg-test-drive">
+      <section id="BookTestDrive" className="bg-test-drive">
         <div className="container p-4 xl:p-0">
           <h1 className="font-never-brat text-xl lg:text-[30px] lg:leading-[39px] text-white uppercase">
             FEEL YOUR RIDE

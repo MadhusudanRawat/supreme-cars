@@ -9,7 +9,7 @@ import { PreLovedCard } from "@/components/cards/PreLovedCard";
 import { convertStringToObject } from "@/utils/convertStringToObject";
 import { CarsListData } from "@/constants";
 
-export const getData = async (string) => {
+export const getData = async ({ string, counts }) => {
   const data = convertStringToObject(string);
 
   const response = CarsListData.filter((car) => {
@@ -34,15 +34,18 @@ export const getData = async (string) => {
     return true;
   });
 
-  return response;
+  return response?.slice(0, counts);
 };
 
-const PreLovedQueries = async ({ params }) => {
+const PreLovedQueries = async ({ params, searchParams }) => {
   const filterString = params?.queries
     ? decodeURIComponent(params?.queries)
     : "";
 
-  const filteredData = await getData(filterString);
+  const filteredData = await getData({
+    string: filterString,
+    counts: searchParams?.counts || 20,
+  });
 
   return (
     <main>
@@ -63,18 +66,18 @@ const PreLovedQueries = async ({ params }) => {
         </div>
       </section>
       <section className="bg-neutral-100 py-4 lg:py-12">
-        <div className="container p-4">
+        <div className="max-w-[1223px] mx-auto w-full p-4">
           <Filters filterString={filterString} />
-          <div className="flex flex-col gap-5 lg:gap-9 md:flex-row">
+          <div className="flex flex-col gap-4 lg:gap-8 md:flex-row">
             <Sort filterString={filterString} />
             <div className="flex-1">
-              <div className="flex flex-wrap gap-4 xl:gap-8 mb-10">
+              <div className="flex flex-wrap gap-4 justify-between xl:gap-8 mb-10">
                 {filteredData?.length ? (
                   filteredData?.map((item) => (
                     <PreLovedCard
                       key={item?.id}
                       item={item}
-                      width="w-full xl:w-[47.5%]"
+                      width="w-full lg:w-[48%] xl:w-[405px]"
                     />
                   ))
                 ) : (

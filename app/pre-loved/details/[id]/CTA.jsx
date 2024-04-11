@@ -9,9 +9,7 @@ export const CTA = ({ details }) => {
       <div className="flex items-start justify-between mb-[6px]">
         <span className="flex-1">
           <p className="text-[11px] leading-[13px]">Pre-Owned</p>
-          <p className="text-xl leading-6">
-            {details?.brand} {details?.name}-{details?.model}
-          </p>
+          <p className="text-xl leading-6">{details?.model}</p>
         </span>
         <Link href="/">
           <SquareArrowOutUpRight className="w-5 h-5 text-neutral-400" />
@@ -21,11 +19,11 @@ export const CTA = ({ details }) => {
       <div className="bg-[#F3F3F3] p-4 rounded-[10px] flex flex-wrap gap-4 mb-10">
         <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-1.webp" alt="d-1" width={24} height={24} />
-          <p className="text-sm leading-4 font-bold">16 Nov 2016</p>
+          <p className="text-sm leading-4 font-bold">{details?.reg_date}</p>
         </span>
         <span className="w-[38%] inline-flex items-center gap-1">
           <Image src="/images/d-2.webp" alt="d-1" width={24} height={24} />
-          <p className="text-sm leading-4 font-bold">{details?.distance} km</p>
+          <p className="text-sm leading-4 font-bold">{details?.mileage} km</p>
         </span>
         <span className="w-[10%] inline-flex items-center gap-1">
           <Image src="/images/d-3.webp" alt="d-1" width={24} height={24} />
@@ -41,12 +39,12 @@ export const CTA = ({ details }) => {
         </span>
       </div>
       <div className="flex items-center gap-2">
-        <button
-          type="button"
+        <Link
+          href="#BookTestDrive"
           className="px-5 py-[10px] flex-1 h-[33px] inline-flex items-center justify-center bg-primary rounded-[5px] text-white font-medium text-[10px] leading-3"
         >
           Book A Test Drive
-        </button>
+        </Link>
         <button
           type="button"
           className="px-5 py-[10px] flex-1 inline-flex items-center justify-center h-[33px] border-2 border-primary rounded-[5px] text-primary font-medium text-[10px] leading-3"

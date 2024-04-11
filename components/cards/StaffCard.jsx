@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const StaffCard = () => {
   return (
-    <div className="w-full p-2 xl:ps-12">
+    <div className="w-full p-2 xl:ps-8">
       <Image
         src="/images/staff-1.webp"
         alt="staff-1"

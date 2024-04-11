@@ -56,7 +56,7 @@ export const Sort = ({ filterString }) => {
   }, [filterString]);
 
   return (
-    <div className="w-full md:w-1/2 h-max lg:w-[300px] xl:w-[316px] p-4 lgpy-9 lg:px-8 rounded-[10px] bg-white">
+    <div className="w-full md:w-1/2 h-max lg:w-[300px] xl:w-[316px] p-4 lg:py-9 lg:px-8 rounded-[10px] bg-white">
       <label
         htmlFor="preLovedSortBrand"
         className="inline-block text-[15px] leading-[18px] font-medium mb-2"
@@ -68,7 +68,7 @@ export const Sort = ({ filterString }) => {
         id="preLovedSortBrand"
         value={filters?.brand || ""}
         onChange={handleOnInputChange}
-        className="border-2 border-neutral-400 rounded-[10px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full mb-[22px]"
+        className="border-2 border-neutral-400 rounded-[5px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full mb-[22px]"
       >
         <option value="">All</option>
         {CarsListData.filter(
@@ -117,7 +117,7 @@ export const Sort = ({ filterString }) => {
         id="preLovedSortYear"
         value={filters?.year || ""}
         onChange={handleOnInputChange}
-        className="border-2 border-neutral-400 rounded-[10px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full"
+        className="border-2 border-neutral-400 rounded-[5px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full"
       >
         <option value="">All</option>
         <option value="2024">2024</option>

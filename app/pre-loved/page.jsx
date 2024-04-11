@@ -7,7 +7,14 @@ import { Sort } from "./Sort";
 import { Filters } from "./Filters";
 import { CarsListData } from "@/constants";
 
-const PreLoved = () => {
+const fetchCarList = ({ counts }) => {
+  const list = CarsListData.slice(0, counts);
+  return list;
+};
+
+const PreLoved = ({ searchParams }) => {
+  const carsList = fetchCarList({ counts: searchParams.counts || 20 });
+
   return (
     <main>
       <section className="bg-pre-loved">
@@ -27,23 +34,27 @@ const PreLoved = () => {
         </div>
       </section>
       <section className="bg-neutral-100 py-4 lg:py-12">
-        <div className="container p-4">
+        <div className="max-w-[1223px] mx-auto w-full p-4">
           <Filters />
-          <div className="flex flex-col gap-5 lg:gap-9 md:flex-row">
+          <div className="flex flex-col gap-4 lg:gap-8 md:flex-row">
             <Sort />
             <div className="flex-1">
-              <div className="flex flex-wrap gap-4 xl:gap-8 mb-10">
-                {CarsListData.map((item) => (
+              <div className="flex flex-wrap gap-4 justify-between xl:gap-8 mb-10">
+                {carsList.map((item) => (
                   <PreLovedCard
                     key={item.id}
                     item={item}
-                    width="w-full xl:w-[47.5%]"
+                    width="w-full lg:w-[48%] xl:w-[405px]"
                   />
                 ))}
               </div>
               <div className="flex items-center justify-center">
                 <Link
-                  href="/pre-loved/details/id"
+                  href={`/pre-loved?counts=${
+                    parseInt(searchParams?.counts) > 20
+                      ? parseInt(searchParams?.counts) + 20
+                      : 40
+                  }`}
                   className="button button-outline"
                 >
                   LOAD MORE

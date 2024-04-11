@@ -11,7 +11,7 @@ export const ContactUsData = [
   },
   {
     id: 3,
-    text: "+65 6479 6280",
+    text: "+65 6266 5555",
     icon: "/images/contact-3.webp",
   },
   {

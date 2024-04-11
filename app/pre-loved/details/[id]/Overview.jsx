@@ -7,7 +7,7 @@ export const Overview = ({ details }) => {
       image: "/images/d-1.webp",
       alt: "d-1",
       title: "Registration Date",
-      body: `${details?.registration}`,
+      body: `${details?.reg_date}`,
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export const Overview = ({ details }) => {
       image: "/images/d-4.webp",
       alt: "d-4",
       title: "Mileage",
-      body: `${details?.distance}km`,
+      body: `${details?.mileage}km`,
     },
     {
       id: 5,

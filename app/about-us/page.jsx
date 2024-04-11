@@ -21,7 +21,7 @@ const AboutUs = () => {
       </section>
       <section className="py-10 lg:py-[120px]">
         <div className="container p-4 lg:p-0">
-          <p className="mx-auto max-w-[506px] w-full text-xl leading-[25px] font-bold">
+          <p className="mx-auto max-w-[506px] w-full text-xl leading-[25px]">
             Supreme Cars was founded by Devin Koo and Eric Chua, who have more
             than 30 years of experience combined in the car industry here in
             Singapore and in the region, and had our humble beginnings in the
@@ -34,16 +34,16 @@ const AboutUs = () => {
       <section className="bg-[#EAEAEA] py-10 lg:py-14">
         <div className="container">
           <div className="flex flex-col lg:flex-row p-4 xl:p-0">
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col mb-[99px]">
               <h2 className="heading mb-6 lg:mb-0">Our Staff</h2>
               <ul className="flex-1 flex flex-col justify-end gap-[30px]">
-                <li className="w-max border-b-2 border-b-primary text-primary font-semibold pe-5">
+                <li className="w-max border-b-2 border-b-primary text-primary font-semibold tracking-tight pb-2 pe-5">
                   Sales
                 </li>
-                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold pe-5">
+                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold tracking-tight pb-2 pe-5">
                   Customer Relationship
                 </li>
-                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold pe-5">
+                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold tracking-tight pb-2 pe-5">
                   Management
                 </li>
               </ul>

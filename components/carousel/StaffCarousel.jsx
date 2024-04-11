@@ -34,7 +34,7 @@ export const StaffCarousel = () => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PreviousArrow />,
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -52,7 +52,7 @@ export const StaffCarousel = () => {
   };
 
   return (
-    <div className="max-w-[800px] w-full mt-16">
+    <div className="staff-carousel max-w-[800px] mb-[99px] w-full mt-16">
       <Slider {...settings}>
         <StaffCard />
         <StaffCard />
