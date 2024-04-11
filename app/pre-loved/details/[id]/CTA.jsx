@@ -49,7 +49,7 @@ export const CTA = ({ details }) => {
           type="button"
           className="px-5 py-[10px] flex-1 inline-flex items-center justify-center h-[33px] border-2 border-primary rounded-[5px] text-primary font-medium text-[10px] leading-3"
         >
-          Enquiry Now
+          Enquire Now
         </button>
         <button type="button" className="inline-block w-[33px] h-[33px]">
           <Image
