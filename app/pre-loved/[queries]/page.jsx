@@ -15,11 +15,14 @@ export const getData = async ({ string, counts }) => {
   const response = CarsListData.filter((car) => {
     if (
       data.query &&
-      !car.name.toLowerCase().includes(data.query.toLowerCase())
+      !car.model.toLowerCase().includes(data.query.toLowerCase())
     ) {
       return false;
     }
-    if (data.brand && car.brand.toLowerCase() !== data.brand.toLowerCase()) {
+    if (
+      data.brand &&
+      !car.model.toLowerCase().includes(data.brand.toLowerCase())
+    ) {
       return false;
     }
     if (data.priceFrom && car.price < parseInt(data.priceFrom)) {

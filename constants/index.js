@@ -2,3 +2,4 @@ export * from "./ServicesData";
 export * from "./BrandNewData";
 export * from "./CardListData";
 export * from "./ContactUsData";
+export * from "./CarBrands";

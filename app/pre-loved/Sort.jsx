@@ -7,7 +7,7 @@ import RangeSlider from "react-range-slider-input";
 
 import { convertObjectToString } from "@/utils/convertObjectToString";
 import { convertStringToObject } from "@/utils/convertStringToObject";
-import { CarsListData } from "@/constants";
+import { CarBrands, CardBrands, CarsListData } from "@/constants";
 
 export const Sort = ({ filterString }) => {
   const router = useRouter();
@@ -71,11 +71,9 @@ export const Sort = ({ filterString }) => {
         className="border-2 border-neutral-400 rounded-[5px] h-[50px] px-4 py-2 text-neutral-400 font-medium leading-none w-full mb-[22px]"
       >
         <option value="">All</option>
-        {CarsListData.filter(
-          (item, index) => item?.brand !== CarsListData[index - 1]
-        ).map((brand) => (
-          <option key={brand.id} value={brand.brand}>
-            {brand.brand}
+        {CarBrands.map((brand) => (
+          <option key={brand} value={brand}>
+            {brand}
           </option>
         ))}
       </select>
