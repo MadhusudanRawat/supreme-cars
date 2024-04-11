@@ -5,7 +5,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 export const CTA = ({ details }) => {
   return (
-    <div className="lg:max-w-[360px] h-max w-full bg-white shadow-regular rounded-[10px] py-[35px] px-[25px]">
+    <div className="sticky top-20 z-10 lg:max-w-[360px] h-max w-full bg-white shadow-regular rounded-[10px] py-[35px] px-[25px]">
       <div className="flex items-start justify-between mb-[6px]">
         <span className="flex-1">
           <p className="text-[11px] leading-[13px]">Pre-Owned</p>

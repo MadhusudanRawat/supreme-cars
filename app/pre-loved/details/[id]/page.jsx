@@ -16,7 +16,6 @@ export const getDetails = (id) => {
 
 const PreLovedDetails = ({ params }) => {
   const details = getDetails(params?.id);
-  console.log(details);
 
   const highlightItems = [
     {
