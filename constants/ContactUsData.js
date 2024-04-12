@@ -6,7 +6,7 @@ export const ContactUsData = [
   },
   {
     id: 2,
-    text: "Shop New & Pre-Loved Cars",
+    text: "Shop New & Pre-Loved Cars ",
     icon: "/images/contact-2.png",
   },
   {
