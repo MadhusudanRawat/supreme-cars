@@ -35,31 +35,27 @@ export const Footer = () => {
         <div className="container p-4 xl:p-0">
           <Link href="/">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="logo"
               width={251}
               height={89}
               className="mb-[26px]"
             />
           </Link>
-          <div className="flex flex-col lg:flex-row items-start">
-            <div className="w-1/2">
+          <div className="flex flex-col gap-8 lg:flex-row items-start">
+            <div className="w-full lg:w-1/2">
               <p className="text-white font-bold">Address</p>
               <p className="text-white mb-[22px]">
                 2 Jalan Kilang Barat, 01-01, Singapore 159346
               </p>
-              <p className="text-white font-bold">General Enquiries</p>
-              <p className="text-white mb-10">+65 6479 6280</p>
-              <p className="text-white font-bold">Service Hours</p>
+              <p className="text-white font-bold">Mobile No.</p>
+              <p className="text-white mb-10">+65 6266 5555</p>
+              <p className="text-white font-bold">Operating Hours</p>
               <p className="text-white">
-                Monday-Friday <strong>09:00 - 04:00</strong>
+                Monday-Saturday <strong>10:00 AM - 06:30 PM</strong>
               </p>
-              <p className="text-white">
-                Monday-Friday <strong>09:00 - 04:00</strong>
-              </p>
-              <p className="text-white">Sunday: Closed</p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <p className="text-base leading-5 text-white font-bold mb-[25px]">
                 Sitemap
               </p>

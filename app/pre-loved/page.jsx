@@ -7,6 +7,11 @@ import { Sort } from "./Sort";
 import { Filters } from "./Filters";
 import { CarsListData } from "@/constants";
 
+export const metadata = {
+  title: "Pre Loved",
+  description: "Supreme Cars | Powered by Sgcarmart",
+};
+
 const fetchCarList = ({ counts }) => {
   const list = CarsListData.slice(0, counts);
   return list;

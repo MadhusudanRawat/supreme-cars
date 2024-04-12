@@ -18,23 +18,38 @@ export const CTA = ({ details }) => {
       <p className="heading text-primary mb-6">${details?.price}</p>
       <div className="bg-[#F3F3F3] p-4 rounded-[10px] flex flex-wrap gap-4 mb-10">
         <span className="w-[38%] inline-flex items-center gap-1">
-          <Image src="/images/d-1.webp" alt="d-1" width={24} height={24} />
+          <Image
+            src="/images/registration-date-red.png"
+            alt="d-1"
+            width={24}
+            height={24}
+          />
           <p className="text-sm leading-4 font-bold">{details?.reg_date}</p>
         </span>
         <span className="w-[38%] inline-flex items-center gap-1">
-          <Image src="/images/d-2.webp" alt="d-1" width={24} height={24} />
+          <Image
+            src="/images/mileage-red.png"
+            alt="d-1"
+            width={24}
+            height={24}
+          />
           <p className="text-sm leading-4 font-bold">{details?.mileage} km</p>
         </span>
         <span className="w-[10%] inline-flex items-center gap-1">
-          <Image src="/images/d-3.webp" alt="d-1" width={24} height={24} />
+          <Image src="/images/owner-red.png" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">1</p>
         </span>
         <span className="w-[38%] inline-flex items-center gap-1">
-          <Image src="/images/d-4.webp" alt="d-1" width={24} height={24} />
+          <Image
+            src="/images/depreciation-red.png"
+            alt="d-1"
+            width={24}
+            height={24}
+          />
           <p className="text-sm leading-4 font-bold">${details?.price}/yr</p>
         </span>
         <span className="w-[38%] inline-flex items-center gap-1">
-          <Image src="/images/d-5.webp" alt="d-1" width={24} height={24} />
+          <Image src="/images/arf-red.png" alt="d-1" width={24} height={24} />
           <p className="text-sm leading-4 font-bold">${details?.price}</p>
         </span>
       </div>
@@ -51,14 +66,17 @@ export const CTA = ({ details }) => {
         >
           Enquire Now
         </button>
-        <button type="button" className="inline-block w-[33px] h-[33px]">
+        <a
+          href={`https://api.whatsapp.com/send/?phone=+6589389555&text=hello+testing`}
+          className="inline-block w-[33px] h-[33px]"
+        >
           <Image
-            src="/images/social-whatsapp.webp"
+            src="/images/whatsapp.png"
             alt="whatsapp"
             width={33}
             height={33}
           />
-        </button>
+        </a>
       </div>
     </div>
   );

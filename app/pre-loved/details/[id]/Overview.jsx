@@ -4,35 +4,40 @@ export const Overview = ({ details }) => {
   const overviewData = [
     {
       id: 1,
-      image: "/images/d-1.webp",
+      imageOne: "/images/registration-date-red.png",
+      imageTwo: "/images/registration-date-white.png",
       alt: "d-1",
       title: "Registration Date",
       body: `${details?.reg_date}`,
     },
     {
       id: 2,
-      image: "/images/d-2.webp",
+      imageOne: "/images/depreciation-red.png",
+      imageTwo: "/images/depreciation-white.png",
       alt: "d-2",
       title: "Depreciation",
       body: `$${details?.price}/year`,
     },
     {
       id: 3,
-      image: "/images/d-3-light.webp",
+      imageOne: "/images/owner-red.png",
+      imageTwo: "/images/owner-white.png",
       alt: "d-3",
       title: "No. of Owners",
       body: 1,
     },
     {
       id: 4,
-      image: "/images/d-4.webp",
+      imageOne: "/images/mileage-red.png",
+      imageTwo: "/images/mileage-white.png",
       alt: "d-4",
       title: "Mileage",
       body: `${details?.mileage}km`,
     },
     {
       id: 5,
-      image: "/images/d-5.webp",
+      imageOne: "/images/arf-red.png",
+      imageTwo: "/images/arf-white.png",
       alt: "d-5",
       title: "ARF",
       body: `$${details?.price}`,
@@ -44,20 +49,27 @@ export const Overview = ({ details }) => {
       {overviewData.map((item) => (
         <div
           key={item.id}
-          className={`${
-            item.id === 3 ? "bg-primary text-white" : "bg-white"
-          } max-w-full sm:max-w-[48.5%] lg:max-w-[224px] w-full shadow-dark rounded-[10px] px-[32px] py-5 flex items-center justify-center gap-[10px]`}
+          className="hover:bg-primary hover:text-white group max-w-full sm:max-w-[48.5%] lg:max-w-[224px] w-full shadow-dark rounded-[10px] px-[32px] py-5 flex items-center justify-center gap-[10px]"
         >
-          <Image src={item.image} alt={item.alt} width={35} height={35} />
+          <Image
+            src={item.imageOne}
+            alt={item.alt}
+            width={35}
+            height={35}
+            className="block group-hover:hidden"
+          />
+          <Image
+            src={item.imageTwo}
+            alt={item.alt}
+            width={35}
+            height={35}
+            className="hidden group-hover:block"
+          />
           <span className="flex-1">
             <p className="text-base leading-[19px] tracking-tighter">
               {item.title}
             </p>
-            <p
-              className={`font-bold leading-[22px] tracking-tighter ${
-                item.id === 3 ? "text-white" : "text-primary"
-              }`}
-            >
+            <p className="font-bold leading-[22px] tracking-tighter">
               {item?.body}
             </p>
           </span>

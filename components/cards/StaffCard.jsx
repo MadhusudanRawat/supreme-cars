@@ -9,7 +9,7 @@ export const StaffCard = () => {
         alt="staff-1"
         width={220}
         height={220}
-        className="object-cover w-full mb-[14px] rounded-[15px]"
+        className="object-cover w-full mb-[14px] rounded-[15px] ring-2 ring-neutral-200"
       />
       <p className="text-xl leading-[30px] font-bold">Jonathan Tan</p>
       <p className="text-lg tracking-tight leading-[25px] mb-[15px]">

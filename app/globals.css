@@ -130,9 +130,16 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100svh;
+  height: 80svh;
   width: 100%;
   padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-about-us {
+    background-position: 70%;
+    height: 100svh;
+  }
 }
 
 .bg-beverages {
@@ -228,7 +235,7 @@ textarea {
   width: 83px !important;
   height: 6px !important;
   background-color: #ee2737;
-  border-radius: 1px !important;
+  border-radius: 4px !important;
 }
 
 .staff-carousel .slick-dots li button::before {

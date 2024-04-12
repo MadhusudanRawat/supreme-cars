@@ -69,7 +69,7 @@ export const Navbar = () => {
           }`}
         >
           <Link href="/">
-            <Image src="/images/logo.webp" alt="logo" width={137} height={49} />
+            <Image src="/images/logo.png" alt="logo" width={137} height={49} />
           </Link>
           <button
             type="button"

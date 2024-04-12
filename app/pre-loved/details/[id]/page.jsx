@@ -8,6 +8,13 @@ import { TestDriveForm } from "@/components/forms/TestDriveForm";
 import { Carousel } from "./Carousel";
 import { CarsListData } from "@/constants";
 
+// export const getDetails = async(id) => {
+//   return await fetch(`https://data.sgcarmart.com/supremecars/info.xml?ID=${id}`).then(async(response)=>{
+//     const data = await response.json();
+//     return data;
+//   }).catch((error)=>error)
+// };
+
 export const getDetails = (id) => {
   const response = CarsListData.filter((car) => car.id === id);
 
@@ -20,25 +27,25 @@ const PreLovedDetails = ({ params }) => {
   const highlightItems = [
     {
       id: 1,
-      image: "/images/h-1.webp",
+      image: "/images/h-1.png",
       alt: "h-1",
       title: "180-Point Inspection",
     },
     {
       id: 2,
-      image: "/images/h-2.webp",
+      image: "/images/h-2.png",
       alt: "h-2",
       title: "48-Hour Money Back Guarantee",
     },
     {
       id: 3,
-      image: "/images/h-3.webp",
+      image: "/images/h-3.png",
       alt: "h-3",
       title: "12-Month Warranty for engine & Gearbox",
     },
     {
       id: 4,
-      image: "/images/h-4.webp",
+      image: "/images/h-4.png",
       alt: "h-4",
       title: "No Mileage Tampering",
     },
@@ -51,8 +58,7 @@ const PreLovedDetails = ({ params }) => {
         <div className="container p-4 xl:p-0">
           <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
             <div className="flex-1">
-              <Tabs />
-              <Overview details={details} />
+              <Tabs details={details} />
               <Finance details={details} />
             </div>
             <CTA details={details} />
@@ -63,7 +69,7 @@ const PreLovedDetails = ({ params }) => {
         <div className="container p-4 xl:p-0">
           <div className="bg-details-highlight flex flex-col xl:flex-row items-center justify-start py-10 md:px-[60px] gap-10 lg:gap-12">
             <Image
-              src="/images/logo-color.webp"
+              src="/images/logo-color.png"
               alt="logo-color"
               width={180}
               height={70}

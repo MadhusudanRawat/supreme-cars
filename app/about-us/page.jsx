@@ -1,8 +1,8 @@
 import { Facebook } from "lucide-react";
 
-import { StaffCarousel } from "@/components/carousel/StaffCarousel";
 import { ContactUsData } from "@/constants";
 import { ContactUsCard } from "@/components/cards/ContactUsCard";
+import { StaffTab } from "@/components/StaffTab";
 
 const AboutUs = () => {
   return (
@@ -31,27 +31,11 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <section className="bg-[#EAEAEA] py-10 lg:py-14">
+      {/* <section className="bg-[#EAEAEA] py-10 lg:py-14">
         <div className="container">
-          <div className="flex flex-col lg:flex-row p-4 xl:p-0">
-            <div className="flex-1 flex flex-col mb-[99px]">
-              <h2 className="heading mb-6 lg:mb-0">Our Staff</h2>
-              <ul className="flex-1 flex flex-col justify-end gap-[30px]">
-                <li className="w-max border-b-2 border-b-primary text-primary font-semibold tracking-tight pb-2 pe-5">
-                  Sales
-                </li>
-                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold tracking-tight pb-2 pe-5">
-                  Customer Relationship
-                </li>
-                <li className="w-max border-b-2 border-b-transparent text-neutral-500 font-semibold tracking-tight pb-2 pe-5">
-                  Management
-                </li>
-              </ul>
-            </div>
-            <StaffCarousel />
-          </div>
+          <StaffTab />
         </div>
-      </section>
+      </section> */}
       <section className="py-10 lg:py-[108px]">
         <div className="container p-4 lg:p-0">
           <h2 className="heading text-center mb-4 lg:mb-12">Contact Us</h2>
