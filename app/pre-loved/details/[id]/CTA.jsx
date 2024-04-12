@@ -67,7 +67,7 @@ export const CTA = ({ details }) => {
           Enquire Now
         </button>
         <a
-          href={`https://api.whatsapp.com/send/?phone=+6589389555`}
+          href={`https://api.whatsapp.com/send/?phone=%2B6589389555&text&type=phone_number`}
           className="inline-block w-[33px] h-[33px]"
         >
           <Image
