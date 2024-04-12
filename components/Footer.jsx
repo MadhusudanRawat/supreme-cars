@@ -48,7 +48,7 @@ export const Footer = () => {
               <p className="text-white mb-[22px]">
                 2 Jalan Kilang Barat, 01-01, Singapore 159346
               </p>
-              <p className="text-white font-bold">General Enquiries.</p>
+              <p className="text-white font-bold">General Enquiries</p>
               <p className="text-white mb-10">+65 6266 5555</p>
               <p className="text-white font-bold">Operating Hours</p>
               <p className="text-white">
